@@ -1,7 +1,10 @@
 import App from './app';
+import GetController from './gets/gets.controller';
 
-const app = new App([
-  
-],5000);
+const app = new App(
+  [
+  new GetController(),
+  ]
+, 5000);
 
 app.listen(); 

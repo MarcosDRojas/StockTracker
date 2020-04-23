@@ -4,7 +4,7 @@ class App {
     public app: express.Application;
     public port: number;
 
-    constructor(controllers: [], port) {
+    constructor(controllers, port) {
         this.app = express();
         this.port = port;
         // Start the services that are needed.
