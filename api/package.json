@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test",
-    "dev": "ts-node ./src/server.ts"
+    "start": "ts-node ./src/server.ts"
   },
-  "author": "",
+  "author": "Marcos Rojas",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "ts-node": "^8.9.0",
     "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6"
   }
 }
