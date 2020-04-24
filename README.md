@@ -12,3 +12,4 @@ Using;
 1st Task
 
 Create Getter endpoint with Express. It will take in a Ticker name and return the current price of the stock, etf, or mutual fund.
+
