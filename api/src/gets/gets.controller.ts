@@ -21,7 +21,7 @@ class GetController {
             path: 'query',
             queryParams: {
                 function: 'TIME_SERIES_INTRADAY',
-                symbol: 'SWTSX',
+                symbol: 'SWPPX',
                 interval: '5min',
                 apikey: '', // TOFO: figure out how to have a api key here without pushing to github.
             }
