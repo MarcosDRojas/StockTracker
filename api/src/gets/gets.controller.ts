@@ -16,17 +16,27 @@ class GetController {
     }
 
     getStockValues = (request: express.Request, response: express.Response) => {
-        //TODO: Figure out how to hide api key.
-        buildUrl('https://www.alphavantage.co/', {
+        // Build URL
+        const url = buildUrl('https://www.alphavantage.co/', {
             path: 'query',
             queryParams: {
                 function: 'TIME_SERIES_INTRADAY',
                 symbol: 'AAPL',
                 interval: '5min',
-                apikey: '',
+                apikey: '', // TOFO: figure out how to have a api key here without pushing to github.
             }
         });
-        response.send('Hello World');
+
+        // Make axios call and return data.
+        axios.get(url).then(
+            res => {
+                this.data = res.data;
+                return response.send(this.data);
+            }
+        ).catch(err => {
+            console.log(err)
+            return response.status(404).send(err);
+        });
     }
 
 }
